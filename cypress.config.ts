@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  baseUrl: "https://commitquality.com/",
+
   resolution: "1920x1080",
   viewportWidth: 1920,
   viewportHeight: 1080,
@@ -19,8 +19,11 @@ module.exports = defineConfig({
     runMode: 3,
     openMode: 0,
   },
-  specPattern: "**/*.cy.ts",
+
   e2e: {
     setupNodeEvents(on, config) {},
+    baseUrl: "https://commitquality.com/",
+    specPattern: "**/*.cy.ts",
   },
+
 });
